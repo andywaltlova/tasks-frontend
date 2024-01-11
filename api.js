@@ -45,7 +45,7 @@ const deleteTask = async (path) => {
 };
 
 export const fetchAvailableTasks = () => {
-  return getTasks(AVAILABLE_TASKS_ROOT);
+  return getTasks(AVAILABLE_TASKS_ROOT.concat(`?limit=20`));
 };
 
 export const fetchAvailableTask = (slug) => {
